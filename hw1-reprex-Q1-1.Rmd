@@ -1,0 +1,12 @@
+---
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(error = TRUE)
+```
+
+```{r plot-ratios}
+ggplot(iris_modified, aes(x = sepal_ratio, y = petal_ratio, color = species)) +
+  geom_point()
+```

@@ -1,0 +1,24 @@
+---
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(error = TRUE)
+```
+
+```{r load-pkg}
+library(tidyverse)
+```
+
+```{r create-iris-modified}
+iris_modified <- iris %>%
+  mutate(
+    sepal_ratio = Sepal.Width / Sepal.Length,
+    petal_ratio = Petal.Width / Petal.Length
+    )
+```
+
+```{r plot-ratios}
+ggplot(iris_modified, aes(x = sepal_ratio, y = petal_ratio, color = species)) +
+  geom_point()
+```

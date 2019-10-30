@@ -1,0 +1,14 @@
+---
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(error = TRUE)
+```
+
+```{r calculate-mean-sw}
+iris %>%
+  group_by(Species) %>%
+  mutate(mean_sw = mean(Sepal.Width))
+```
+

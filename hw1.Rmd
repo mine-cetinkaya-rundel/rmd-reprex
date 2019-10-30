@@ -1,0 +1,55 @@
+---
+title: "hw1"
+author: "Mine Çetinkaya-Rundel"
+date: "10/30/2019"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(error = TRUE)
+```
+
+This is needed for any chunk in the document.
+
+```{r load-pkg}
+library(tidyverse)
+```
+
+## Question 1
+
+And here is some other code that is required for the next chunk:
+
+```{r create-iris-modified}
+iris_modified <- iris %>%
+  mutate(
+    sepal_ratio = Sepal.Width / Sepal.Length,
+    petal_ratio = Petal.Width / Petal.Length
+    )
+```
+
+And here is another problematic chunk, with an actual error. `s`pecies should be 
+`S`pecies.
+
+```{r plot-ratios}
+ggplot(iris_modified, aes(x = sepal_ratio, y = petal_ratio, color = species)) +
+  geom_point()
+```
+
+## Question 2
+
+Below is some code that has is not required to run the next chunk.
+
+```{r plotsepal-width-length}
+ggplot(iris, aes(x = Sepal.Width, y = Sepal.Length)) +
+  geom_point()
+```
+
+And here is the chunk in question. Should have used `summarise()` not `mutate()`
+is the answer.
+
+```{r calculate-mean-sw}
+iris %>%
+  group_by(Species) %>%
+  mutate(mean_sw = mean(Sepal.Width))
+```
+
