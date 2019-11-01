@@ -10,7 +10,9 @@ Going from an error in an Rmd file to a reprex in an R script is not an easy tas
 novice learners, so it would be nice to offer them a pathway to developing reprexes 
 as they're learning R using (mostly, or entirely) Rmd files for their work.
 
-## Questions
+## Example: `hw1.Rmd`
+
+A sample analysis with two chunks with that requires reprexes.
 
 1. Chunk: `calculate-mean-sw` -- No error but not what I want
 2. Chunk: `plot-ratios` -- Error
