@@ -1,5 +1,15 @@
 # rmd-reprex
 
+## Motivation
+
+Most intro data science / stats courses use an Rmd based workflow almost entirely or at 
+least for the first big chunk of the course. There are also various workshops that 
+adopt this workflow entirely. 
+
+Going from an error in an Rmd file to a reprex in an R script is not an easy task for 
+novice learners, so it would be nice to offer them a pathway to developing reprexes 
+as they're learning R using (mostly, or entirely) Rmd files for their work.
+
 ## Questions
 
 1. Chunk: `calculate-mean-sw` -- No error but not what I want
